@@ -1,0 +1,16 @@
+The best way to tackle this wordy problem is to break it into smaller peices thats easier to digest.
+
+1. Lets define our variable
+    source - String of length "N"
+    target  - String of length "N"
+    original - List of char of length "M"
+    changed - List of char of length "M"
+    cost - List of int of length "M"
+
+2. Now that we have the variable defined, lets understand what we are trying to return
+    We are trying to return an int that represents the amount of points it will take to convert the string "source" to string "target"
+    The cost to change a letter to another is shown as original[i] -> changed[i] costs cost[i].
+
+3. How do we solve this
+    We can use the Floyd Warshall's algorithm with original, changed, and cost.
+    This basically makes a directed weighted graph and shows the lowest cost from letter A to letter B
