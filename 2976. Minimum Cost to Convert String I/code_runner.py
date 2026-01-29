@@ -19,16 +19,29 @@ if __name__ == "__main__":
         lines = [line.strip() for line in f.readlines() if line.strip()]
         
         # Read source string
-        source = lines[0]
+        source = json.loads(lines[0])
         
         # Read target string
-        target = lines[1]
+        target = json.loads(lines[1])
+
+        # Read list of characters
+        original = json.loads(lines[2])
+
+        # Read list of characters
+        changed = json.loads(lines[3])
+
+        #read list of ints
+        cost = json.loads(lines[4])
     
     print(f"source: {source}")
     print(f"target: {target}")
+    print(f"original: {original}")
+    print(f"changed: {changed}")
+    print(f"cost: {cost}")
+    
     print()
     
     # Create solution instance and run
     solution = Solution()
-    result = solution.minCost(source, target)
+    result = solution.minCost(source, target, original, changed, cost)
     print(f"\nResult: {result}")
