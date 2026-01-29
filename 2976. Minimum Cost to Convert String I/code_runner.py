@@ -43,5 +43,5 @@ if __name__ == "__main__":
     
     # Create solution instance and run
     solution = Solution()
-    result = solution.minCost(source, target, original, changed, cost)
+    result = solution.minimumCost(source, target, original, changed, cost)
     print(f"\nResult: {result}")
