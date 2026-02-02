@@ -7,7 +7,6 @@ sys.dont_write_bytecode = True
 import json
 from solution import Solution
 
-
 if __name__ == "__main__":
     # Get the directory of the current script
     script_dir = os.path.dirname(os.path.abspath(__file__))
